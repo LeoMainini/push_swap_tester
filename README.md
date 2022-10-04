@@ -15,6 +15,8 @@ Run the helper script for information of the script.
 
 There is no setup required, just clone the git in the root of your push_swap folder, or wherever your push_swap binary is, and run the script
 
+For debugging purposes, run help.sh for some more detailed information
+
 
 
 
