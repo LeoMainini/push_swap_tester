@@ -23,7 +23,7 @@ There is no setup required, just clone the git and run the script
 
 #### Retorna todos os itens
 
-```shell
+```txt
 ./test_all.sh
  
 Compiling push_swap
