@@ -21,8 +21,6 @@ There is no setup required, just clone the git and run the script
 
 ## Documentação da API
 
-#### Retorna todos os itens
-
 ```txt
 ./test_all.sh
  
