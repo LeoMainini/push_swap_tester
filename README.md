@@ -21,7 +21,7 @@ For debugging purposes or if you feel the numbers arent what they should be, run
 
 
 
-## Documentação da API
+## Example
 
 ```txt
 ./test_all.sh
