@@ -6,11 +6,15 @@
 #    By: leferrei <leferrei@student.42lisboa.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 15:23:47 by leferrei          #+#    #+#              #
-#    Updated: 2022/10/04 17:02:19 by leferrei         ###   ########.fr        #
+#    Updated: 2022/10/05 13:41:34 by leferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 PUSH_SWAP_PATH=".."
+LEN_3=100
+LEN_5=100
+LEN_100=500
+LEN_500=50
 
 test_ps() {
 echo -n "Testing $1 numbers	->  "
@@ -56,15 +60,7 @@ echo "Compiling push_swap\n"
 
 make -C $PUSH_SWAP_PATH re -s;
 
-RANGE=3
-LEN_3=100
-test_ps $RANGE $LEN_3
-RANGE=5
-LEN_5=100
-test_ps $RANGE $LEN_5
-RANGE=100
-LEN_100=500
-test_ps $RANGE $LEN_100
-RANGE=500
-LEN_500=50
-test_ps $RANGE $LEN_500
+test_ps 3 $LEN_3
+test_ps 5 $LEN_5
+test_ps 100 $LEN_100
+test_ps 500 $LEN_500
