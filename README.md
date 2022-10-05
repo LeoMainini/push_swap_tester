@@ -26,27 +26,30 @@ For debugging purposes or if you feel the numbers arent what they should be, run
 ```txt
 ./test_all.sh
  
+Found push_swap
+
 Compiling push_swap
 
-Cleaning files 
+Files cleaned
 
-Compilation complete 
+Compilation complete
 
-Testing 3 numbers	->  [~~~~~~~~~~] ✓
-	-> Avg instructions for 100 iterations of 3 random numbers	= 1
-	-> Max instructions for 100 iterations of 3 random numbers	= 2
+Testing 3 numbers       ->  [~~~~~~~~~~] ✓
+        -> Avg instructions for 100 iterations of 3 random numbers      = 1
+	-> Max instructions for 100 iterations of 3 random numbers      = 2
 
-Testing 5 numbers	->  [~~~~~~~~~~] ✓
-	-> Avg instructions for 100 iterations of 5 random numbers	= 8
-	-> Max instructions for 100 iterations of 5 random numbers	= 12
+Testing 5 numbers       ->  [~~~~~~~~~~] ✓
+        -> Avg instructions for 100 iterations of 5 random numbers      = 7
+	-> Max instructions for 100 iterations of 5 random numbers      = 12
 
-Testing 100 numbers	->  [~~~~~~~~~~] ✓
-	-> Avg instructions for 500 iterations of 100 random numbers	= 603
-	-> Max instructions for 500 iterations of 100 random numbers	= 678
+Testing 100 numbers     ->  [~~~~~~~~~~] ✓
+        -> Avg instructions for 500 iterations of 100 random numbers    = 604
+	-> Max instructions for 500 iterations of 100 random numbers    = 675
 
-Testing 500 numbers	->  [~~~~~~~~~~] ✓
-	-> Avg instructions for 50 iterations of 500 random numbers	= 5506
-	-> Max instructions for 50 iterations of 500 random numbers	= 5789
+Testing 500 numbers     ->  [~~~~~~~~~~] ✓
+        -> Avg instructions for 50 iterations of 500 random numbers     = 5487
+	-> Max instructions for 50 iterations of 500 random numbers     = 5870
+
 
 ```
 
