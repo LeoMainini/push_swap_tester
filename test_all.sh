@@ -3,21 +3,22 @@
 #                                                         :::      ::::::::    #
 #    test_all.sh                                        :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: leferrei <leferrei@student.42lisboa.c      +#+  +:+       +#+         #
+#    By: leferrei <leferrei@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/04 15:23:47 by leferrei          #+#    #+#              #
-#    Updated: 2022/10/05 13:41:34 by leferrei         ###   ########.fr        #
+#    Created: 2022/10/05 15:08:20 by leferrei          #+#    #+#              #
+#    Updated: 2022/10/05 15:27:11 by leferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 PUSH_SWAP_PATH=".."
+LOG_OUT=0
 LEN_3=100
 LEN_5=100
 LEN_100=500
 LEN_500=50
 
 test_ps() {
-echo -n "Testing $1 numbers	->  "
+printf "Testing $1 numbers	->  "
 total=0
 max=0
 rm -rf test_$1.log
@@ -28,35 +29,37 @@ do
 	moves=$($PUSH_SWAP_PATH/push_swap $ARG)
 	calcs=$(echo "$moves" | wc -l)
 	total=$((total + calcs))
-	echo "./push_swap $ARG\n$moves\nTotal moves for this input = $calcs\n" >> test_$1.log
+	if [ $LOG_OUT != 0 ]
+	then
+		printf "./push_swap $ARG\n$moves\nTotal moves for this input = $calcs\n\n" >> test_$1.log
+	fi
 	if [ $calcs -gt $max ]
 	then
 		max=$calcs
 	fi
 	if [ $(($i % ($2 / 10))) -eq "0" ]
 	then
-		echo -n "~"
-
+		printf "~"
 	fi
 	if [ $i -eq $2 ]
 	then
-		echo "] ✓"
+		printf "] ✓\n"
 	fi
 done
 mean=$((total / $2))
-echo "	-> Avg instructions for $2 iterations of $1 random numbers\t= $mean"
-echo "	-> Max instructions for $2 iterations of $1 random numbers\t= $max\n"
+printf "	-> Avg instructions for $2 iterations of $1 random numbers\t= $mean\n"
+printf "	-> Max instructions for $2 iterations of $1 random numbers\t= $max\n\n"
 }
 
 if find $PUSH_SWAP_PATH -type f -perm 755 -name "push_swap" -print -quit | grep -q "^"
 then
-	echo "Found push_swap\n"
+	printf "Found push_swap\n\n"
 else
-	echo "Failed to find push_swap folder"
+	printf "Failed to find push_swap folder\n"
 	exit
 fi
 
-echo "Compiling push_swap\n"
+printf "Compiling push_swap\n\n"
 
 make -C $PUSH_SWAP_PATH re -s;
 
